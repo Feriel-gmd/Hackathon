@@ -63,7 +63,7 @@ exit();
                     <p>تم تسجيل الخروج بنجاح</p>
                     <div class="auth-buttons">
                         <a href="javascript:history.back()" class="auth-button"><i class="fas fa-arrow-right"></i> رجوع</a>
-                        <a href="part1.php" class="auth-button"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
+                        <a href="index.php" class="auth-button"><i class="fas fa-home"></i> الصفحة الرئيسية</a>
                     </div>
                 </div>
             </div>

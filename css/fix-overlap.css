@@ -2,10 +2,11 @@
 
 /* Smart Farming Assistant Section */
 .agriculture-assistant-section {
-    margin-bottom: 100px !important; /* Add significant bottom margin */
+    background: #ffffff !important; 
+    margin-bottom: 100px !important; 
     position: relative;
     z-index: 1;
-    padding-bottom: 50px !important; /* Added padding at the bottom */
+    padding-bottom: 50px !important; 
 }
 
 /* Challenges Section */
@@ -16,18 +17,18 @@
 }
 
 /* Container adjustments */
-.agriculture-assistant-section .container {
+/* .agriculture-assistant-section .container {
     margin-bottom: 50px;
-}
+} */
 
 .challenges-section .container {
     margin-top: 50px;
 }
 
 /* Add extra bottom spacing to the form section */
-.agriculture-assistant-section .form-section {
+/* .agriculture-assistant-section .form-section {
     margin-bottom: 30px !important;
-}
+} */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

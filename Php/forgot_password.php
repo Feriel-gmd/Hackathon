@@ -17,8 +17,8 @@
                 <span class="logo-text">FAY</span>
             </div>
             <ul class="nav-links">
-                <li><a href="part1.php#food-security-slider">الامن الغذائي</a></li>
-                <li><a href="part1.php#tips-section">نصائح</a></li>
+                <li><a href="index.php#food-security-slider">الامن الغذائي</a></li>
+                <li><a href="index.php#tips-section">نصائح</a></li>
                 <li><a href="#">توجيه</a></li>
                 <li><a href="#">الطقس</a></li>
                 <li><a href="#">نقائص</a></li>

@@ -201,21 +201,6 @@ html {
     display: block;
 }
 
-/* Section Titles with Icons */
-.section-title {
-    font-size: 2rem;
-    margin-right: 10%;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center; /* Aligns text and icon */
-    justify-content: flex-start; /* Aligns the text to the left */
-}
-
-
-.section-title i {
-    margin-left: 10px; /* Space between icon and text */
-}
 
 /* Card Section */
 .card-section {
