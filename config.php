@@ -1,13 +1,18 @@
 <?php
-$host = "localhost";
-$dbname = "food_donation";
-$username = "root";
-$password = "";
+$host = 'localhost';       // عادة localhost
+$db   = 'fay_db';          // اسم قاعدة البيانات
+$user = 'root';            // اسم المستخدم (غيّره إذا لزم)
+$pass = 'root';                // كلمة المرور (اتركها فارغة إذا لم توجد)
 
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+$conn = new mysqli($host, $user, $pass, $db);
+
+// فحص الاتصال
+if ($conn->connect_error) {
+    die("فشل الاتصال بقاعدة البيانات: " . $conn->connect_error);
 }
-?> 
+
+// تعيين الترميز
+$conn->set_charset("utf8mb4");
+
+// يمكنك الآن استخدام $conn لتنفيذ استعلامات
+?>

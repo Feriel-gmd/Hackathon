@@ -1,20 +1,7 @@
 <?php
 // Start the session
 session_start();
-
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "fay_db";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'config.php';
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -64,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->execute()) {
             // Registration successful
             $_SESSION['register_success'] = "تم إنشاء الحساب بنجاح. يمكنك الآن تسجيل الدخول.";
-            header("Location: login.php");
+            header("Location: index.php");
             exit();
         } else {
             // Registration failed

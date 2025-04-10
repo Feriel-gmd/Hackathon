@@ -1,0 +1,306 @@
+/* Main Container Styles */
+.agriculture-assistant-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4f5e8 100%);
+}
+
+/* Section Styles */
+.agriculture-assistant-section {
+    padding: 60px 40px;
+    background-color: #ffffff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15);
+    width: 100%;
+    max-width: 900px;
+    min-height: auto;
+    margin: 0 auto;
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.agriculture-assistant-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(46, 125, 50, 0.2);
+}
+
+/* Heading Styles */
+.agriculture-assistant-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.agriculture-assistant-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), #81C784);
+    border-radius: 3px;
+}
+
+/* Form Section Styles */
+.form-section {
+    background-color: var(--background-color);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+}
+
+/* Form Group Styles */
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+/* Form Input Styles */
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.05rem;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+/* Button Styles */
+.form-group button,
+#analyzeBtn {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #4CAF50 100%);
+    color: #ffffff;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-group button:hover,
+#analyzeBtn:hover {
+    background: linear-gradient(135deg, #1B5E20 0%, var(--primary-color) 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 125, 50, 0.3);
+}
+
+/* Results Section Styles */
+#results {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(46, 125, 50, 0.1);
+    display: none;
+}
+
+/* Result Card Styles */
+.result-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.result-card:hover {
+    transform: translateX(5px);
+}
+
+.result-title {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.result-title i {
+    margin-left: 10px;
+    font-size: 1.8rem;
+}
+
+.season-badge {
+    background: linear-gradient(135deg, #4CAF50 0%, var(--primary-color) 100%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.result-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.result-detail {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.result-detail:hover {
+    background-color: #f0f7f0;
+    transform: translateX(5px);
+}
+
+.result-detail i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.detail-content {
+    flex: 1;
+}
+
+.detail-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.detail-content p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.materials-list, .tips-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.materials-list li, .tips-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    color: #333;
+}
+
+.materials-list li:last-child, .tips-list li:last-child {
+    border-bottom: none;
+}
+
+.tips-section {
+    background-color: #fff8e1;
+}
+
+.tips-section:hover {
+    background-color: #fff3e0;
+}
+
+/* Error Message Styles */
+.error-message {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: right;
+    font-weight: 500;
+}
+
+.error-icon {
+    margin-left: 15px;
+    font-size: 2rem;
+    color: #dc3545;
+}
+
+.error-content {
+    flex: 1;
+}
+
+.error-content h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.error-content p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-section,
+#results {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .agriculture-assistant-section {
+        padding: 40px 20px;
+    }
+    
+    .form-section {
+        padding: 30px 20px;
+    }
+    
+    .agriculture-assistant-section h2 {
+        font-size: 2.2rem;
+    }
+}

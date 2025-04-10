@@ -7,165 +7,18 @@ session_start();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAY - الأمن الغذائي</title>
-    <link rel="stylesheet" href="part1.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="css/part1.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/fix-overlap.css">
+    <link rel="stylesheet" href="css/weather.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Additional styles for donation section */
-        .donation-section {
-            padding: 40px 0;
-            background-color: var(--background-color);
-            margin-top: 40px;
-        }
-        
-        .donation-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .donation-header h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            position: relative;
-            display: inline-block;
-        }
-        
-        .donation-header h2:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-        
-        .donation-form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .donation-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-        
-        .donation-form .full-width {
-            grid-column: 1 / -1;
-        }
-        
-        .donation-form label {
-            font-weight: bold;
-            margin-bottom: 8px;
-            display: block;
-            color: var(--primary-color);
-        }
-        
-        .donation-form input,
-        .donation-form select,
-        .donation-form textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        
-        .donation-form input:focus,
-        .donation-form select:focus,
-        .donation-form textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-        
-        .donation-form button {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%;
-            margin-top: 10px;
-        }
-        
-        .donation-form button:hover {
-            background-color: #1b5e20;
-        }
-        
-        /* Success and error messages */
-        .message {
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-        
-        .success-message {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .error-message {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        /* Specific styles for the additional comments textarea */
-        #city-answer {
-            height: 120px;
-            width: 100%;
-            resize: vertical;
-            min-height: 100px;
-            max-height: 200px;
-            box-sizing: border-box;
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-text">FAY</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#food-security-slider">الامن الغذائي</a></li>
-                <li><a href="#tips-section">نصائح</a></li>
-                <li><a href="#donation-section">التبرع</a></li>
-                <li><a href="#challenges">التحديات</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle"><i class="fas fa-user"></i> حساب</a>
-                    <ul class="dropdown-menu">
-                        <?php if(isset($_SESSION['user_id'])): ?>
-                            <li><a href="#"><i class="fas fa-user-circle"></i> مرحباً <?php echo htmlspecialchars($_SESSION['user_name']); ?></a></li>
-                            <li><a href="#"><i class="fas fa-history"></i> سجل تبرعاتي</a></li>
-                            <li><a href="#"><i class="fas fa-cog"></i> إعدادات الحساب</a></li>
-                            <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
-                        <?php else: ?>
-                            <li><a href="login.php"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</a></li>
-                            <li><a href="register.php"><i class="fas fa-user-plus"></i> انشاء حساب</a></li>
-                            <li><a href="forgot_password.php"><i class="fas fa-key"></i> نسيت كلمة المرور</a></li>
-                        <?php endif; ?>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'navbar.php'; ?>
 
     <!-- Image Slider Section with Text -->
     <section id="food-security-slider" class="slider-section">
@@ -221,7 +74,123 @@ session_start();
             </div>
         </div>
     </section>
+    <!-- Smart Farming Assistant Section -->
+<section class="agriculture-assistant-section" style="background-color: #f8f8f8;">
+    <div class="container">
+        <h2 style="color:#2E7D32; text-align: center;"><i class="fas fa-leaf"></i> مساعد الزراعة الذكي</h2>
+        
+        <div class="form-section" style="background: #fff; padding: 20px; border-radius: 10px;">
+            <div class="form-group">
+                <label for="soil">نوع التربة</label>
+                <select id="soil">
+                    <option value="رملية">رملية</option>
+                    <option value="طينية">طينية</option>
+                    <option value="طفالية">طفالية</option>
+                    <option value="طباشيرية">طباشيرية</option>
+                    <option value="حامضية">حامضية</option>
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="type">نوع الزرع</label>
+                <select id="type">
+                    <option value="غير محدد">غير محدد</option>
+                    <option value="خضر">خضر</option>
+                    <option value="فاكهة">فاكهة</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="fruitsGroup" style="display: none;">
+                <label for="fruit">اختر الفاكهة</label>
+                <select id="fruit">
+                    <option value="تفاح">تفاح</option>
+                    <option value="موز">موز</option>
+                    <option value="برتقال">برتقال</option>
+                    <option value="عنب">عنب</option>
+                    <option value="رمان">رمان</option>
+                    <option value="مشمش">مشمش</option>
+                    <option value="مانجا">مانجا</option>
+                    <option value="أفوكادو">أفوكادو</option>
+                    <option value="ميرينغ">ميرينغ</option>
+                    <option value="كمثرى">كمثرى</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="vegetablesGroup" style="display: none;">
+                <label for="vegetable">اختر الخضار</label>
+                <select id="vegetable">
+                    <option value="طماطم">طماطم</option>
+                    <option value="خيار">خيار</option>
+                    <option value="بطاطا">بطاطا</option>
+                    <option value="جزر">جزر</option>
+                    <option value="فلفل">فلفل</option>
+                    <option value="بامية">بامية</option>
+                    <option value="قرنبيط">قرنبيط</option>
+                    <option value="ملفوف">ملفوف</option>
+                    <option value="كرنب">كرنب</option>
+                    <option value="بصل">بصل</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="plantingDate">موعد الغرس</label>
+                <input type="date" id="plantingDate">
+            </div>
+
+            <div class="form-group">
+                <label for="notes">تفاصيل إضافية</label>
+                <textarea id="notes" rows="3" placeholder="مثل الموقع، الظروف البيئية..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <button id="analyzeBtn">نصائح زراعية</button>
+            </div>
+            
+            <div id="results" style="background:#eef; padding: 20px; margin-top: 20px; border-radius: 10px;"></div>
+        </div>
+    </div>
+</section>
+
+<section id="weather-section" class="section-weather">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-cloud-sun"></i> حالة الطقس</h2>
+        <div class="weather-container">
+            <div class="weather-input">
+                <div class="input-group">
+                    <input type="text" id="city" class="form-control" placeholder="أدخل اسم المدينة">
+                    <button onclick="getWeather()" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                        عرض الطقس
+                    </button>
+                </div>
+            </div>
+            <div class="weather-content">
+                <div id="weather-loading" class="weather-loading" style="display: none;">
+                    <i class="fas fa-spinner fa-spin loading-spinner"></i>
+                    <p>جاري تحميل معلومات الطقس...</p>
+                </div>
+                <div id="weather-info" class="weather-info"></div>
+                <div id="weather-advice" class="weather-advice"></div>
+                <div id="weather-error" class="error-message" style="display: none;">
+                    <i class="fas fa-exclamation-circle error-icon"></i>
+                    <div class="error-content">
+                        <h4>خطأ</h4>
+                        <p>حدث خطأ أثناء جلب معلومات الطقس. يرجى المحاولة مرة أخرى.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="forecast" class="section-weather">
+    <div class="container">
+        <h2 class="section-title"><i class="fas fa-calendar-alt"></i> توقعات الأيام القادمة</h2>
+        <div id="daily-forecast" class="forecast-container"></div>
+    </div>
+</section>
+
+   
     <!-- Challenges Section -->
     <section id="challenges" class="challenges-section">
         <div class="container">
@@ -240,7 +209,7 @@ session_start();
                 </ul>
             </div>
             <div class="image">
-                <img src="img/img.jpg" alt="Food Security Challenge" />
+                <img src="images/img.jpg" alt="Food Security Challenge" />
             </div>
         </div>
     </section>
@@ -381,6 +350,8 @@ session_start();
         </div>
     </footer>
 
-    <script src="part1.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/part1.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html> 

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>نسيت كلمة المرور - FAY</title>
-    <link rel="stylesheet" href="part1.css" />
-    <link rel="stylesheet" href="auth.css" />
+    <link rel="stylesheet" href="css/part1.css" />
+    <link rel="stylesheet" href="css/auth.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -73,6 +73,6 @@
         </div>
     </section>
 
-    <script src="part1.js"></script>
+    <script src="js/part1.js"></script>
 </body>
 </html> 
