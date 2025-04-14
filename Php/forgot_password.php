@@ -4,36 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>نسيت كلمة المرور - FAY</title>
-    <link rel="stylesheet" href="css/part1.css" />
-    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/forgot_password.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-text">FAY</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.php#food-security-slider">الامن الغذائي</a></li>
-                <li><a href="index.php#tips-section">نصائح</a></li>
-                <li><a href="#">توجيه</a></li>
-                <li><a href="#">الطقس</a></li>
-                <li><a href="#">نقائص</a></li>
-                <li><a href="#">تبرع</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle"><i class="fas fa-user"></i> حساب</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="login.php">تسجيل الدخول</a></li>
-                        <li><a href="register.php">انشاء حساب</a></li>
-                        <li><a href="logout.php">خروج</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+   <?php include 'navbar.php'; ?>
 
     <!-- Forgot Password Form Section -->
     <section class="auth-section">

@@ -7,12 +7,18 @@ session_start();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAY - الأمن الغذائي</title>
-    <link rel="stylesheet" href="css/part1.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    
+    <link rel="stylesheet" href="css/advice.css" />
+    <link rel="stylesheet" href="css/agriculture.css" />
     <link rel="stylesheet" href="css/auth.css" />
-    <link rel="stylesheet" href="css/formm.css">
-    <link rel="stylesheet" href="css/fix-overlap.css">
-    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/challenges.css" />
+    <link rel="stylesheet" href="css/donation.css" />
+    <link rel="stylesheet" href="css/foodSec.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/weather.css" />
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>

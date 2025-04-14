@@ -2,7 +2,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-text">FAY</span>
+                <span class="logo-text">FYA</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#food-security-slider">الامن الغذائي</a></li>

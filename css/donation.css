@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #2E7D32;
+    --background-color: #f0f0f0;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: 16px;
+    --border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+p {
+    color: #000000;
+}
+
+li {
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    list-style: none;
+
+}
+.donation-section {
+    padding: 40px 0;
+    background-color: var(--background-color);
+    margin-top: 40px;
+}
+
+.donation-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.donation-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.donation-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.donation-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.donation-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.donation-form .full-width {
+    grid-column: 1 / -1;
+}
+
+.donation-form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--primary-color);
+}
+.donation-form select {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.donation-form input:focus,
+.donation-form select:focus,
+.donation-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.donation-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.donation-form button:hover {
+    background-color: #1b5e20;
+}
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#city-answer {
+    height: 120px;
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+}

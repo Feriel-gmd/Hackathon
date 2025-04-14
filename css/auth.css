@@ -1,3 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #2E7D32;
+    --background-color: #f0f0f0;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: 16px;
+    --border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+p {
+    color: #000000;
+}
+
+li {
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    list-style: none;
+
+}
 /* Authentication Pages Styles */
 .auth-section {
     margin-top: 100px;
@@ -48,58 +85,6 @@
     flex-direction: column;
     gap: 1.2rem;
 }
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.form-group label {
-    font-weight: bold;
-    color: #4a5568;
-    font-size: 0.95rem;
-}
-
-.input-group {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.input-group i {
-    position: absolute;
-    right: 1rem;
-    color: #666;
-    font-size: 1.1rem;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 0.75rem 2.5rem 0.75rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
-    outline: none;
-}
-
-.remember-me, .terms {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.remember-me input, .terms input {
-    width: auto;
-    margin: 0;
-}
-
 .auth-button {
     background-color: var(--primary-color);
     color: white;
@@ -150,7 +135,45 @@
     font-size: 0.95rem;
     line-height: 1.5;
 }
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
+.form-group label {
+    font-weight: bold;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    right: 1rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(46, 125, 50, 0.1);
+    outline: none;
+}
 /* Alert Messages */
 .alert {
     padding: 0.75rem 1rem;
@@ -183,7 +206,35 @@
     color: #1e40af;
     border: 1px solid #bfdbfe;
 }
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .auth-container {
+        padding: 0 1.5rem;
+    }
 
+    .auth-card {
+        padding: 1.5rem;
+    }
+
+    .auth-title {
+        font-size: 1.5rem;
+    }
+}
+
+/*#################### LOGIN ####################*/
+.remember-me,
+.terms {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remember-me input,
+.terms input {
+    width: auto;
+    margin: 0;
+}
+/* #################### LOGOUT #################### */
 /* Logout Message Styles */
 .logout-message {
     display: flex;
@@ -203,21 +254,7 @@
     color: #4a5568;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .auth-container {
-        padding: 0 1.5rem;
-    }
-    
-    .auth-card {
-        padding: 1.5rem;
-    }
-    
-    .auth-title {
-        font-size: 1.5rem;
-    }
-}
-
+/* #################### REGISTER #################### */
 .form-text {
     display: block;
     margin-top: 0.25rem;
@@ -226,7 +263,6 @@
     text-align: right;
     padding-right: 0.5rem;
 }
-
 .input-group input:invalid {
     border-color: #dc3545;
 }
@@ -234,7 +270,6 @@
 .input-group input:invalid:focus {
     box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.25);
 }
-
 /* Password strength indicator */
 .password-strength {
     height: 4px;
@@ -256,4 +291,4 @@
 .password-strength.strong {
     background-color: #28a745;
     width: 100%;
-} 
+}

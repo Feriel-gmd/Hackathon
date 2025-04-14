@@ -1,12 +1,39 @@
-/* Main Container Styles */
-.agriculture-assistant-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #2E7D32;
+    --background-color: #f0f0f0;
+    --font-family: 'Montserrat', sans-serif;
+    --font-size: 16px;
+    --border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: var(--font-family);
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4f5e8 100%);
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+p {
+    color: #000000;
+}
+
+li {
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    list-style: none;
+
 }
 
 /* Section Styles */
@@ -49,7 +76,6 @@
     background: linear-gradient(90deg, var(--primary-color), #81C784);
     border-radius: 3px;
 }
-
 /* Form Section Styles */
 .form-section {
     padding: 40px;
@@ -127,154 +153,13 @@
     border: 1px solid rgba(46, 125, 50, 0.1);
     display: none;
 }
-
-/* Result Card Styles */
-.result-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    margin-bottom: 25px;
-    border-left: 5px solid var(--primary-color);
-    transition: transform 0.3s;
-}
-
-.result-card:hover {
-    transform: translateX(5px);
-}
-
-.result-title {
-    display: flex;
-    align-items: center;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    border-bottom: 1px solid #e0e0e0;
-    padding-bottom: 15px;
-}
-
-.result-title i {
-    margin-left: 10px;
-    font-size: 1.8rem;
-}
-
-.season-badge {
-    background: linear-gradient(135deg, #4CAF50 0%, var(--primary-color) 100%);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    margin-right: 10px;
-}
-
-.result-details {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.result-detail {
-    display: flex;
-    align-items: flex-start;
-    margin: 10px 0;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: var(--border-radius);
-    transition: all 0.3s ease;
-}
-
-.result-detail:hover {
-    background-color: #f0f7f0;
-    transform: translateX(5px);
-}
-
-.result-detail i {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-left: 15px;
-    margin-top: 5px;
-}
-
-.detail-content {
-    flex: 1;
-}
-
-.detail-content h4 {
-    color: var(--primary-color);
-    margin-bottom: 8px;
-    font-size: 1.1rem;
-}
-
-.detail-content p {
-    color: #333;
-    line-height: 1.5;
-}
-
-.materials-list, .tips-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.materials-list li, .tips-list li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #e0e0e0;
-    color: #333;
-}
-
-.materials-list li:last-child, .tips-list li:last-child {
-    border-bottom: none;
-}
-
-.tips-section {
-    background-color: #fff8e1;
-}
-
-.tips-section:hover {
-    background-color: #fff3e0;
-}
-
-/* Error Message Styles */
-.error-message {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-    color: #721c24;
-    border: 1px solid #f5c6cb;
-    padding: 20px;
-    border-radius: var(--border-radius);
-    margin-top: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    text-align: right;
-    font-weight: 500;
-}
-
-.error-icon {
-    margin-left: 15px;
-    font-size: 2rem;
-    color: #dc3545;
-}
-
-.error-content {
-    flex: 1;
-}
-
-.error-content h4 {
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-}
-
-.error-content p {
-    margin: 0;
-    line-height: 1.5;
-}
-
 /* Animation Styles */
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -291,11 +176,11 @@
     .agriculture-assistant-section {
         padding: 40px 20px;
     }
-    
+
     .form-section {
         padding: 30px 20px;
     }
-    
+
     .agriculture-assistant-section h2 {
         font-size: 2.2rem;
     }
