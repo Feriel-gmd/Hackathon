@@ -70,7 +70,7 @@
                 <button id="analyzeBtn">نصائح زراعية</button>
             </div>
             
-            <div id="results" style="background:#eef; padding: 20px; margin-top: 20px; border-radius: 10px;"></div>
+            <div id="results"></div>
         </div>
     </div>
 </section>

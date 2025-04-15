@@ -1,10 +1,10 @@
  <!-- Tips Section Title -->
-    <section class="tips-title-section">
-        <h2 class="section-title"><i class="fas fa-lightbulb"></i> نصائح</h2>
+    <section class="section-title" id="tips-section">
+            <h2><i class="fas fa-lightbulb"></i> نصائح</h2>
     </section>
 
     <!-- Tips Section (Cards) -->
-    <section id="tips-section" class="card-section">
+    <section class="card-section">
         <div class="card-container">
             <div class="card">
                 <div class="card-image">

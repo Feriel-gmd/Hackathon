@@ -9,7 +9,7 @@ session_start();
     <title>FAY - الأمن الغذائي</title>
     
     <link rel="stylesheet" href="css/advice.css" />
-    <link rel="stylesheet" href="css/agriculture.css" />
+    <link rel="stylesheet" href="css/Agriculture.css" />
     <link rel="stylesheet" href="css/auth.css" />
     <link rel="stylesheet" href="css/challenges.css" />
     <link rel="stylesheet" href="css/donation.css" />
@@ -17,7 +17,7 @@ session_start();
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/weather.css" />
+    <link rel="stylesheet" href="css/Weather.css" />
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">

@@ -36,6 +36,20 @@ li {
 
 }
 
+.section-title {
+    flex: 1;
+    padding: 1rem;
+    max-width: 50%;
+    text-align: right;
+    margin-right: 15%;
+    margin-bottom: -50px;
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
 /* Card Section */
 .card-section {
     margin-top: 20px;

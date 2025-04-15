@@ -25,6 +25,7 @@ const API_KEY = 'c2ff2d85c6749b4e412a459c1bbfe0f5';
       return (common / maxLen) * 0.6 + (1 - Math.abs(str1.length - str2.length)/maxLen) * 0.4;
   }
 
+
   // دالة الحصول على النصائح المطورة
   function getAgriculturalAdvice(description, temperature, humidity, windSpeedKmh) {
       const normalizedDesc = description.trim().toLowerCase();
@@ -137,13 +138,14 @@ const API_KEY = 'c2ff2d85c6749b4e412a459c1bbfe0f5';
               for (let i = 7; i < data.list.length; i += 8) {
                   const item = data.list[i];
                   const date = new Date(item.dt * 1000);
-                  forecastDiv.innerHTML += `
-                      <div class="daily-item">
-                          <h4>${date.toLocaleDateString('ar-EG')}</h4>
-                          <p class="forecast-desc">${item.weather[0].description}</p>
-                          <p class="forecast-temp">${Math.round(item.main.temp)}°C</p>
-                      </div>
-                  `;
+                    forecastDiv.innerHTML += `
+                    <div class="daily-item">
+                        <h4>${date.toLocaleDateString('ar-EG', { weekday: 'long', day: 'numeric', month: 'long' })}</h4>
+                        <p class="forecast-desc">${item.weather[0].description}</p>
+                        <p class="forecast-temp">${Math.round(item.main.temp)}°C</p>
+                    </div>
+                    `;
+
               }
 
               // تقديم نصائح زراعية بناءً على الطقس
